@@ -9,36 +9,48 @@
 
     </style>
 </head>
-<body>
-    <div>
-
-    </div>
+<body id="body">
+    <!-- <div id="mydiv">Labas</div> -->
 	
 	<script>
+        //let temp = document.getElementById('mydiv') .innerHTML;
+        //console.log(temp + temp);
+        //let elem = document.getElementById('mydiv');
+        //elem.innerHTML = elem.innerHTML + '<div style="background-color: red;">Labas labas</div>';
+        //elem.innerHTML = elem.innerHTML + "Hello";
+        //elem.innerHTML = elem.innerHTML + 'Labas';
+        //elem.innerHTML += '<div style="background-color: red;">Labas labas</div>';
+        //elem.innerHTML += "Hello";
+        //elem.innerHTML += 'Labas';
+        //let elem = document.getElementById('body');
+        //elem.innerHTML += '<div style="border: 1px solid black;" id="mydiv">Labas</div>';
+        //let div1 = document.getElementById('mydiv');
+        //div1.innerHTML = '<div style="margin: 10px; background-color: yellow;">Labas</div>';
+
+        //elem.innerHTML += '<div style="border: 1px solid black;" id="mydiv2">Labas</div>';
+        //let div2 = document.getElementById('mydiv2');
+        //div2.innerHTML = '<div style="margin: 10px; background-color: yellow;">Labas</div>';
+        let elem = document.getElementById('body');
+        elem.innerHTML += '<div id="mydiv">Labas</div>';
+        //let div = document.getElementById('mydiv');
+        //div.style.backgroundColor = "red";
+        //div.style.padding = "10px";
+        //div.style.border = "5px solid black";
+        let st = document.getElementById('mydiv').style;
+        st.backgroundColor = "red";
+        st.padding = "10px";
+        st.border = "5px solid black";
+
+
 		// input
-		let x = 5;
-		let y = 2;
+		
 		
 		// algoritm
-        let sum = x + y;
-        let diff = x - y;
-        let mult = x * y;
-        let div = x / y;
-        let mod = x % y;
+        
 		
 		// output
 		
-        console.log("The value of x is " + x);
-        console.log("The value of y is " + y);
-
-        console.log(sum);
-        console.log(diff);
-        console.log(mult);
-        console.log(div);
-        console.log(mod);
-        
-        
-		
+        	
 
     </script>
     
