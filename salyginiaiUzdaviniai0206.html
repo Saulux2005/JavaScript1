@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Salyginiai uzdaviniai
+        //1.
+        function neigTeig(number){
+            if (number < 0) {
+                console.log("1.Blogas");
+            }
+            if (number > 0) {
+                console.log("1.Geras");
+            }
+            if (number == 0) {
+                console.log("1.Skaicius yra nulis");
+            }   
+        }
+        neigTeig(20);
+
+        //2.
+        function sviesofor(number) {
+            if (number == 1) {
+                console.log("2.Eikite");
+            }
+            if (number == 2) {
+                console.log("2.Palaukite");
+            }
+            if (number == 3) {
+                console.log("2.Sustokite");
+            }  
+        }
+        sviesofor(2)
+
+        //3.
+        function knygDez(d, k, n) {
+            let z = Math.ceil(k / n);
+            /*if (d / z >= 1) {
+                console.log("Knygos telpa į dėžes");
+            }*/
+            if (d / z < 1) {
+                console.log("3.Knygos netelpa į dėžes");
+            } else {
+                console.log("3.Knygos telpa į dėžes");
+            }
+
+        }
+        knygDez(2, 8, 5)
+        knygDez(3, 18, 5)
+
+        //4.
+        function polindrom4(number) {
+            let sk4as = number % 10;
+            let sk3ias = Math.floor(number / 10) % 10;
+            let sk2as = Math.floor(number / 100) % 10;
+            let sk1as = Math.floor(number / 1000) % 10;
+            if (sk1as == sk4as & sk2as == sk3ias) {
+                console.log("4.Skaičius polindromas");
+            } else {
+                console.log("4.Skaičius nepolindromas");
+            }
+        }
+        polindrom4(1221)
+        polindrom4(1223)
+
+        //5.
+        function loterija(number) {
+            let sk6as = number % 10;
+            let sk5as = Math.floor(number / 10) % 10;
+            let sk4as = Math.floor(number / 100) % 10;
+            let sk3ias = Math.floor(number / 1000) % 10;
+            let sk2as = Math.floor(number / 10000) % 10;
+            let sk1as = Math.floor(number / 100000) % 10;
+            let z = sk1as + sk2as + sk3ias + sk4as + sk5as + sk6as;
+            if (z % 4 == 0) {
+                console.log("5.Bilietas laimingas");
+            } else {
+                console.log("5.Bilietas nelaimingas");
+            }
+        }
+        loterija(222442)
+        loterija(222443)
+
+        //6.
+        function keliamiejiM(number) {
+            if (number % 4 == 0 & number % 100 != 0) {
+                console.log("6.Metai keliamieji");
+            } else {
+                console.log("6.Metai nekeliamieji");
+            }
+
+        }
+        keliamiejiM(1911)
+        keliamiejiM(2004)
+        
+        //7.
+        function polindrom5(number) {
+            let sk5as = number % 10;
+            let sk4as = Math.floor(number / 10) % 10;
+            let sk3ias = Math.floor(number / 100) % 10;
+            let sk2as = Math.floor(number / 1000) % 10;
+            let sk1as = Math.floor(number / 10000) % 10;
+            if (sk1as == sk5as & sk2as == sk4as) {
+                console.log("7.Skaičius polindromas");
+            } else {
+                console.log("7.Skaičius nepolindromas");
+            }
+        }
+        polindrom5(12321)
+        polindrom5(12423)
+
+        //8.
+        function duBro(number) {
+            if (number > 6) {
+                console.log("8.Skaicius didesnis nei 6. Iveskite skaiciu ne didesni nei 6!")
+            } else if (number % 2 == 0) {
+                    console.log("8.Kambarį tvarkys vyresnėlis");
+                } else {
+                    console.log("8.Kambarį tvarkys jaunėlis");
+                  }
+        }
+        duBro(1)
+        duBro(4)
+        duBro(7)
+
+        //9.
+        function kontrol(p1, p2, p3) {
+            if (p2 >= p3 & p1 > p2 || p3 >= p2 & p1 > p3) {
+                console.log("9.Pirmas gavo geriausią pažymį");
+            }
+            if (p1 >= p3 & p2 > p1 || p3 >= p1 & p2 > p3) {
+                console.log("9.Antras gavo geriausią pažymį");
+            }
+            if (p2 >= p1 & p3 > p2 || p1 >= p2 & p3 > p1) {
+                console.log("9.Trečias gavo geriausią pažymį");
+            }
+            if (p1 == p2 & p2 == p3) {
+                console.log("9.Visų pažymiai vienodi");
+            }
+        }
+        kontrol(8, 8, 9)
+        kontrol(9, 3, 3)
+        kontrol(5, 8, 5)
+        kontrol(6, 6, 6)
+
+        //10.
+
+        function menDienSk(mn) {
+            if (mn == 2 ) {
+                console.log("10.  " + mn + " mėnesio dienų kiekis yra 28.");
+            } else if (mn == 4 || mn == 6 || mn == 9 || mn == 11) {
+                console.log("10.  " + mn + " mėnesio dienų kiekis yra 30.");
+            } else {
+                console.log("10.  " + mn + " mėnesio dienų kiekis yra 31.");
+            }
+        }
+        menDienSk(5)
+        menDienSk(2)
+
+        //11.
+
+        function petroKel(v1, m1, m2, v, m) {
+
+        }
+
+
+        /*
+        function myFunction(number){
+            if (number % 2 == 0) {
+                console.log("Lyginis");
+            }
+            if (number % 2 == 1) {
+                console.log("Nelyginis");
+            }   
+        }
+        myFunction(1235);
+        */
+
+    </script>
+    
+</body>
+</html>

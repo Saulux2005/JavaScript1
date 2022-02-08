@@ -8,66 +8,67 @@
 </head>
 <body id="body">
     <script>
-        // input
-        let textr1 = "about me";
-        let textr2 = "I'm a UI Designer and Front End Developer from Sydney, Australia"
-        let textr3 = "I enjoy taking complex problems and turning them into simple and beatiful interface designs. I also love the logic and structure of coding and always strive to write elegant and efficient code, whether it be HTML, CSS or jQuery."
-        let textr4 = "When I'm not coding or pushing pixels, you'l find me in the gym or on the court shooting some hoops.";
-        let textr5 = '<img id="imgfl" src="images/fblike.jpg" alt="Facebook Like" /> <img id="imgft" src="images/followtwitter.jpg" alt="Follow Twitter" />';
-        let textrR = '<img id="img11" src="images/about11.jpg" alt="Face" />';
 
-        // algoritm
         let main = document.getElementById('body');
-        body.style.fontFamily = "Helvetica, sans-serif";
-        main.innerHTML = '<div id="row1"></div> <div id="row2"></div> <div id="row3"></div> <div id="row4"></div> <div id="row5"></div> <div id="rowR"></div>';
-        main.style.width = "30%"
-        //main.style.float = "left";
 
-        row1.innerHTML = textr1;
-        let str1 = document.getElementById('row1').style;
-        str1.fontWeight = "bold";
-        str1.fontSize = "3rem";
-        //str1.cssFloat = "left";
+        main.style.fontFamily = "Helvetica, sans-serif";
+        main.style.width = "100%";
+        main.style.margin = "0px";
 
+        let bContent = "";
+        //main.innerHTML += '<div id="left">';
+
+        let tAbout = "about me";
+        bContent += '<div style="float: left; width: 50%"><div id="rAbout">' + tAbout + '</div>';
+
+        let tInfo = "I'm a UI Designer and Front End Developer from Sydney, Australia";
+        bContent += '<div id="rInfo">' + tInfo + '</div>';
         
-        row2.innerHTML = textr2;
-        let str2 = document.getElementById('row2').style;
-        str2.padding = "15px 0px";
-        //str2.fontWeight = "bold";
-        str2.fontSize = "1.5rem";
-        //str2.cssFloat = "left";
+        let tDesc = "<p>I enjoy taking complex problems and turning them into simple and beatiful interface designs. I also love the logic and structure of coding and always strive to write elegant and efficient code, whether it be HTML, CSS or jQuery.</p><p>When I'm not coding or pushing pixels, you'l find me in the gym or on the court shooting some hoops.</p>";
+        bContent += '<div id="rDesc">' + tDesc + '</div>';
+                
+        let tLinks = "";
+        tLinks += '<img id="imgFacebook" src="images/fblike.jpg" alt="Facebook Like" />';
+        tLinks += '<img id="imgTwitter" src="images/followtwitter.jpg" alt="Follow Twitter" />';
 
-        row3.innerHTML = textr3;
-        let str3 = document.getElementById('row3').style;
-        str3.padding = "15px 0px";
-        str3.fontSize = "0.8rem";
-        //str3.cssFloat = "left";
+        bContent += '<div id="rLinks">' + tLinks + '</div></div>';
         
-        row4.innerHTML = textr4;
-        let str4 = document.getElementById('row4').style;
-        //str4.fontWeight = "bold";
-        str4.padding = "15px 0px";
-        str4.fontSize = "0.8rem";
-        //str4.cssFloat = "left";
+        let bigFace = '<img id="img11" src="images/about11.jpg" alt="Face" />';
+        bContent += '<div id="right">' + bigFace + '</div>';
+        
+        main.innerHTML = bContent;
+        
+        function setStyle(id, size){
+            let myStyle = document.getElementById(id).style;
+            myStyle.fontSize = size + "rem";
+            myStyle.padding = "15px 0px";
+            myStyle.width = "100%";
+        }
 
-        row5.innerHTML = textr5;
-        let str5 = document.getElementById('row5').style;
-        imgfl.style.paddingRight = imgft.style.paddingRight = "10px";
-        imgfl.style.width = imgft.style.width = "30%";
-        imgfl.style.height = imgft.style.height = "10px";
-        str5.padding = "15px 0px";
-        //str5.cssFloat = "left";
+        setStyle("rAbout", 3);
+        document.getElementById("rAbout").style.fontWeight = "bold";
 
-        rowR.innerHTML = textrR;
-        let strR = document.getElementById('rowR').style;
-        //strR.clear = "left";
-        strR.cssFloat = "right";
-        //strR.width = "60%"
+        setStyle("rInfo", 1.5);
+        setStyle("rDesc", 0.8); 
+        setStyle("rLinks","");
+        
+        function setImgStyle(id, width, height, pRight){
+            let myStyle = document.getElementById(id).style;
+            myStyle.width = width + "%";
+            myStyle.height = height + "px";
+            myStyle.paddingRight = pRight + "px";
+        }
+        
+        setImgStyle("imgFacebook", 30, 10, 10);
+        setImgStyle("imgTwitter", 30, 10, 10);
 
-        // output
-        console.log("Success!")
-
+        let colRight = document.getElementById('right').style;
+        colRight.cssFloat = "right";
+        colRight.width = "50%";
+        
     </script>
     
 </body>
 </html>
+
+-->
